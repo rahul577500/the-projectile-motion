@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Projectile Motion Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: rgb(167, 168, 168);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .calculator {
+      background: white;
+      padding: 0;
+      border-radius: 18px;
+      width: 720px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+      overflow: hidden;
+    }
+
+    .layout {
+      display: flex;
+    }
+
+    .left {
+      width: 45%;
+      padding: 30px;
+      background: linear-gradient(160deg, #165ef8, #30332f);
+      color: white;
+    }
+
+    .right {
+      width: 55%;
+      padding: 40px;
+      background: #ffffff;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-size: 14px;
+      opacity: 0.9;
+    }
+
+    input {
+      width: 90%;
+      padding: 12px 14px;
+      margin: 8px 0 16px;
+      font-size: 15px;
+      border-radius: 20px;
+      border: none;
+      outline: none;
+      background: rgba(255, 255, 255, 0.9);
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      background: white;
+      color: #4b2cc7;
+      font-size: 15px;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: transform 0.2s;
+    }
+
+    button:hover {
+      background: #82a1ff;
+      color: #ffffff;
+      
+    }
+    
+    .result {
+      margin-top: 30px;
+      font-size: 16px;
+      color: #333;
+      line-height: 1.8;
+    }
+
+    .result p {
+      background: #f4f6ff;
+      padding: 10px 14px;
+      border-radius: 12px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="calculator layout">
+    <div class="left">
+      <h2>Inputs</h2>
+
+      <label>Initial Velocity (m/s)</label>
+      <input type="number" id="velocity" placeholder="Enter velocity">
+
+      <label>Angle (degrees)</label>
+      <input type="number" id="angle" placeholder="Enter angle (0 - 90)" min="0" max="90">
+
+      <button onclick="calculate()">Calculate</button>
+    </div>
+
+    <div class="right">
+      <h2>Results</h2>
+      <div class="result">
+        <p id="time"></p>
+        <p id="range"></p>
+        <p id="height"></p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function calculate() {
+      const u = parseFloat(document.getElementById("velocity").value);
+      const angle = parseFloat(document.getElementById("angle").value);
+      const g = 9.8;
+
+      if (isNaN(u) || isNaN(angle)) {
+        alert("Please enter valid values");
+        return;
+      }
+
+      if (angle < 0 || angle > 90) {
+        alert("Angle must be between 0 and 90 degrees");
+        return;
+      }
+
+      const theta = angle * Math.PI / 180;
+
+      const timeOfFlight = (2 * u * Math.sin(theta)) / g;
+      const range = (u * u * Math.sin(2 * theta)) / g;
+      const maxHeight = (u * u * Math.sin(theta) * Math.sin(theta)) / (2 * g);
+
+      document.getElementById("time").innerHTML =
+        "Time of Flight: " + timeOfFlight.toFixed(2) + " s";
+
+      document.getElementById("range").innerHTML =
+        "Range: " + range.toFixed(2) + " m";
+
+      document.getElementById("height").innerHTML =
+        "Maximum Height: " + maxHeight.toFixed(2) + " m";
+    }
+  </script>
+
+</body>
+
+</html>

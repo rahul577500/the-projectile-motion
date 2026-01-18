@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Projectile Motion Theory</title>
+
+<style>
+body{
+    margin:0;
+    padding:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background:#c2c2c2;
+    color:#1f2937;
+}
+
+.header{
+    background:#59549e;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+.container{
+    max-width:1100px;
+    margin:25px auto;
+    padding:20px;
+}
+
+.card{
+    background:white;
+    border-radius:8px;
+    padding:20px;
+    margin-bottom:20px;
+    border-left:6px solid #3131f3;
+}
+
+.card h2{
+    margin-top:0;
+    color:#3131f3;
+}
+
+.formula{
+    background:#e0e3ee;
+    padding:12px;
+    border-radius:6px;
+    margin:10px 0;
+    font-family:"Courier New", monospace;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:15px;
+}
+
+ul{
+    padding-left:20px;
+}
+
+.footer{
+    text-align:center;
+    font-size:14px;
+    color:#4b4f58;
+    margin:30px 0;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    <h1>Projectile Motion - Theory</h1>
+</div>
+
+<div class="container">
+
+    <div class="card">
+        <h2>1. Introduction</h2>
+        <p>
+            Projectile motion is a form of motion experienced by an object
+            (called a projectile) that is launched into the air and moves
+            along a curved path under the sole influence of gravity.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>2. Key Characteristics</h2>
+        <ul>
+            <li><b>Two-Dimensional Motion:</b> Motion occurs in both horizontal and vertical directions.</li>
+            <li><b>Parabolic Trajectory:</b> The path followed by the projectile is always a parabola
+                (assuming air resistance is negligible).</li>
+            <li><b>Independence of Motion:</b> Horizontal motion does not affect vertical motion and vice-versa.</li>
+            <li><b>Acceleration:</b> The only acceleration acting is gravity (g = 9.81 m/s² on Earth),
+                which acts vertically downward.</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>3. Motion Components</h2>
+        <p>
+            To analyze projectile motion, the initial velocity <b>u</b> at launch angle <b>θ</b>
+            is split into two components:
+        </p>
+        <div class="grid">
+            <div class="formula">
+                <b>Horizontal Component</b><br>
+                u<sub>x</sub> = u cosθ<br>
+                Remains constant throughout the flight
+            </div>
+            <div class="formula">
+                <b>Vertical Component</b><br>
+                u<sub>y</sub> = u sinθ<br>
+                Changes continuously due to gravity
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>4. Equations Used in the Project</h2>
+        <div class="formula">
+            Horizontal displacement:<br>
+            <b>x = u<sub>x</sub> × t</b>
+        </div>
+        <div class="formula">
+            Vertical displacement:<br>
+            <b>y = u<sub>y</sub>t − ½gt²</b>
+        </div>
+        <div class="formula">
+            Vertical velocity at time t:<br>
+            <b>v<sub>y</sub> = u<sub>y</sub> − gt</b>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>5. Important Calculations</h2>
+        <div class="grid">
+            <div class="formula">
+                Time of Flight (T):<br>
+                <b>T = 2u sinθ / g</b>
+            </div>
+            <div class="formula">
+                Maximum Height (H):<br>
+                <b>H = u² sin²θ / 2g</b>
+            </div>
+            <div class="formula">
+                Horizontal Range (R):<br>
+                <b>R = u² sin2θ / g</b>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>6. Important Observations</h2>
+        <ul>
+            <li><b>Maximum Range:</b> Achieved when the launch angle is 45°.</li>
+            <li><b>Complementary Angles:</b> Angles like 30° and 60° produce the same range
+                but different heights.</li>
+            <li><b>Velocity at Peak:</b> At maximum height, vertical velocity becomes zero
+                while horizontal velocity remains constant.</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>7. Real-World Applications</h2>
+        <ul>
+            <li><b>Sports:</b> Throwing a ball, kicking a football, shooting a basketball.</li>
+            <li><b>Nature:</b> Water sprayed from fountains or garden hoses.</li>
+            <li><b>Technology:</b> Artillery shells, missiles, and space launch analysis.</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>8. Gravity Values Used in Simulation</h2>
+        <div class="grid">
+            <div class="formula">Earth: g = 9.81 m/s²</div>
+            <div class="formula">Moon: g = 1.62 m/s²</div>
+            <div class="formula">Mars: g = 3.71 m/s²</div>
+        </div>
+    </div>
+
+</div>
+
+<div class="footer">
+    Projectile Motion Simulation Project | SYBsc CS | B.N.Bandodkar | Rahul & Prathmesh
+</div>
+
+</body>
+</html>

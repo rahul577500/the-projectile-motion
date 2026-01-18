@@ -1,0 +1,117 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  min-height: 100vh;
+  background-image: url(asset/sky.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+
+
+.h3-container{
+  position: absolute;
+  top: 10%;
+  /* Adjust vertical position as needed */
+  left: 10%;
+  /* Adjust horizontal position as needed */
+  transform: translate(-10%, 20%);
+  /* Centers the text precisely */
+  color: rgb(255, 255, 255);
+  /* Choose a color that stands out from the background */
+  z-index: 2;
+  font-size: 6rem;
+
+
+
+}
+
+
+
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  /* buttons in vertical line */
+  position: absolute;
+
+  right: 20%;
+  /* distance from right side */
+  top: 50%;
+  transform: translateY(-50%);
+  gap: 20px;
+}
+
+/* Button styling */
+.btn {
+  text-decoration: none;
+  background: #2196F3;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-family: sans-serif;
+  display: inline-block;
+  text-align: center;
+}
+.btn-sim-btn{
+  text-decoration: none;
+  text-align: center;
+  font-size: 40px;
+  background-color: transparent;
+  padding: 20px 40px;
+  color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+.btn-th-btn{
+  text-decoration: none;
+  text-align: center;
+  font-size: 40px;
+  background-color: transparent;
+  padding: 20px 40px;
+  color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+.btn-cl-btn{
+  text-decoration: none;
+  text-align: center;
+  font-size: 40px;
+  background-color: transparent;
+  padding: 20px 40px;
+  color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+
+}
+
+.btn-sim-btn:hover{
+  background: #4962f0;
+  /* darker blue on hover */
+  transform: scale(1.05);
+  /* slight zoom */
+  transition: 0.2s;
+
+}
+
+.btn-th-btn:hover{
+  background: #4962f0;
+  /* darker blue on hover */
+  transform: scale(1.05);
+  /* slight zoom */
+  transition: 0.2s;
+}
+
+.btn-cl-btn:hover{
+   background: #4962f0;
+  /* darker blue on hover */
+  transform: scale(1.05);
+  /* slight zoom */
+  transition: 0.2s;
+}
